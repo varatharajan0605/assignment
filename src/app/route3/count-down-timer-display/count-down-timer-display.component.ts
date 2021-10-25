@@ -21,7 +21,7 @@ export class CountDownTimerDisplayComponent implements OnInit, OnChanges {
   }
 
   ngOnChanges(changes: SimpleChanges) {
-    console.log('changes : ', changes);
+    // console.log('changes : ', changes);
     if (changes && changes.startOrPause && !changes.startOrPause.firstChange) {
       if (this.startOrPause === 'start') {
         this.start();
@@ -37,23 +37,23 @@ export class CountDownTimerDisplayComponent implements OnInit, OnChanges {
   }
 
   start() {
-    console.log('started...')
+    // console.log('started...')
     this.intervalFn = setInterval(() => {
       if (this.timeLimit < 0) {
         clearInterval(this.intervalFn);
-        console.log('interval cleared.')
+        // console.log('interval cleared.')
         this.onComplete();
       }
       if (this.timeLimit >= 0) {
         this.counter = this.timeLimit;
         this.timeLimit--;
-        console.log(this.counter);
+        // console.log(this.counter);
       }
     }, this.intervalTime);
   }
 
   pause() {
-    console.log('paused...');
+    // console.log('paused...');
     if (this.intervalFn) {
       clearInterval(this.intervalFn);
       this.intervalFn = null;
@@ -62,7 +62,7 @@ export class CountDownTimerDisplayComponent implements OnInit, OnChanges {
   }
 
   resetTimer() {
-    console.log('reset...');
+    // console.log('reset...');
     this.counter = 0;
     if (this.intervalFn) {
       clearInterval(this.intervalFn);

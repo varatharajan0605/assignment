@@ -1,15 +1,15 @@
 <p class="m-3">Count down timer app using input and output decorators.</p>
-<div style="width: 30%; vertical-align: middle;" class="d-inline-block">
+<div class="d-inline-block timer-display-container">
     <app-count-down-timer-display [timeLimit]="timeLimit" [startOrPause]="startOrPause" [reset]="reset" (complete)="onComplete()"></app-count-down-timer-display>
 </div>
-<div style="width: 70%; vertical-align: middle;" class="d-inline-block">
+<div class="d-inline-block timer-action-container">
     <app-count-down-timer-action [complete]="completed" (startOrPauseEvent)="onStartOrPause($event)" (resetEvent)="onReset($event)" (timeLimitEvent)="onTimeLimitInput($event)"></app-count-down-timer-action>
 </div>
 
-<div style="width: 30%; vertical-align: middle;" class="d-inline-block">
+<div class="d-inline-block timer-logs-container">
     <app-count-down-timer-logs [logDate]="logDate" [reset]="reset" [startOrPause]="startOrPause"></app-count-down-timer-logs>
 </div>
 
-<div style="width: 70%; vertical-align: top;" class="d-inline-block">
+<div class="d-inline-block timer-frequency-container">
     <app-count-down-timer-frequency [frequency]="frequency"></app-count-down-timer-frequency>
 </div>

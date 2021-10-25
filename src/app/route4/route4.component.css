@@ -1,0 +1,15 @@
+.timer-display-container,
+.timer-logs-container {
+    width: 30%;
+    vertical-align: middle;
+}
+
+.timer-action-container {
+    width: 70%;
+    vertical-align: middle;
+}
+
+.timer-frequency-container {
+    width: 70%;
+    vertical-align: top;
+}
