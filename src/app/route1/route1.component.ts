@@ -16,8 +16,9 @@ import {
       state('in', style({
       })),
       transition('* <=> in', [
-        animate(200, style({
-          'transform': 'rotateY(20deg) rotateX(10deg)'
+        animate('1s linear', style({
+          // 'transform': 'rotateY(20deg) rotateX(10deg)'
+          'transform': 'rotateY(360deg)'
         }))
       ]),
     ])
