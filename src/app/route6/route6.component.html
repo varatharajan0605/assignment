@@ -1,0 +1,5 @@
+<div class="container-box" (scroll)="onScroll($event)">
+    <div *ngFor="let item of lists; let idx = index;" class="dimensions mt-3 ml-3 mb-3 d-flex align-items-center justify-content-center">
+        <button class="btn-primary" (click)="clickHandler(idx)">Button {{idx + 1}}</button>
+    </div>
+</div>

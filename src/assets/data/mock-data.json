@@ -1,0 +1,81 @@
+[{
+        "name": "William",
+        "class": 9,
+        "section": "B",
+        "maths": 70,
+        "science": 65,
+        "socialScience": 83
+    },
+    {
+        "name": "Richard",
+        "class": 8,
+        "section": "A",
+        "maths": 50,
+        "science": 95,
+        "socialScience": 91
+    },
+    {
+        "name": "Christopher",
+        "class": 10,
+        "section": "C",
+        "maths": 90,
+        "science": 95,
+        "socialScience": 93
+    },
+    {
+        "name": "Matthew",
+        "class": 10,
+        "section": "B",
+        "maths": 40,
+        "science": 55,
+        "socialScience": 63
+    },
+    {
+        "name": "Anthony",
+        "class": 8,
+        "section": "B",
+        "maths": 70,
+        "science": 85,
+        "socialScience": 92
+    },
+    {
+        "name": "Donald",
+        "class": 6,
+        "section": "B",
+        "maths": 50,
+        "science": 97,
+        "socialScience": 90
+    },
+    {
+        "name": "Steven",
+        "class": 10,
+        "section": "B",
+        "maths": 30,
+        "science": 45,
+        "socialScience": 83
+    },
+    {
+        "name": "Kenneth",
+        "class": 10,
+        "section": "B",
+        "maths": 60,
+        "science": 92,
+        "socialScience": 87
+    },
+    {
+        "name": "George",
+        "class": 9,
+        "section": "B",
+        "maths": 88,
+        "science": 78,
+        "socialScience": 56
+    },
+    {
+        "name": "Timothy",
+        "class": 7,
+        "section": "B",
+        "maths": 75,
+        "science": 55,
+        "socialScience": 76
+    }
+]

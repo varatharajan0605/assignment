@@ -1,0 +1,59 @@
+<div class="d-flex justify-content-end">
+    <div class="d-flex align-items-center">
+        <span [class.activeViewState]="viewState == 'list'" style="cursor: pointer;" (click)="toggleViewState()">
+            <fa-icon [icon]="listViewIcon"></fa-icon>
+        </span>
+        <span [class.activeViewState]="viewState == 'grid'" class="ml-2 mr-2" style="cursor: pointer;" (click)="toggleViewState()">
+            <fa-icon [icon]="gridViewIcon"></fa-icon>
+        </span>
+    </div>
+
+    <select class="mr-2" name="price" id="price" [(ngModel)]="appliedFilter" (change)="filterBy()">
+        <option disabled value="">Select</option>
+        <option value="all">All</option>
+        <option value="lowToHigh">Price: Low To High</option>
+        <option value="highToLow">Price: High To Low</option>
+    </select>
+    <!-- <div class="dropdown pr-3">
+        <button style="width: 168px;" id="priceDropdown" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false" aria-haspopup="true">Price</button>
+        <div class="dropdown-menu">
+            <span class="dropdown-item">Price: Low to High</span>
+            <span class="dropdown-item">Price: High to Low</span>
+        </div>
+    </div> -->
+
+</div>
+<div *ngIf="loading" class="d-flex justify-content-center">
+    <div class="spinner-border text-primary" role="status"></div>
+</div>
+<div style="font-size: 20px; color: #878787; text-align: center;" *ngIf="errorMsg">{{errorMsg}}</div>
+<div *ngIf="viewState == 'grid'" class="mt-3" style="width: 80%; margin: auto">
+    <span class="d-inline-block card-container" *ngFor="let product of products;" style="width: calc(100% / 4);">
+        <div class="d-flex justify-content-center">
+            <img class="pt-3 w-100 p-2" style="height: 300px;" [src]="product.image" alt="">
+        </div>
+        <div class="pl-3 pr-3">
+            <div style="font-size: 14px; color: #878787;" class="text-ellipsis">{{product.title}}</div>
+            <div style="font-size: 14px; color: #212121;" class="text-ellipsis">{{product.description}}</div>
+            <div style="font-size: 16px; color: #212121;">{{product.price | currency}}</div>
+        </div>
+    </span>
+</div>
+
+<div *ngIf="viewState == 'list'" class="mt-3" style="width: 80%; margin: auto;">
+    <span class="d-inline-block card-container" *ngFor="let product of products;" style="width: calc(100% / 2);">
+        <div class="d-inline-block" style="width: 40%;">
+            <img class="pt-3 w-100 p-2" style="height: 300px;" [src]="product.image" alt="">
+        </div>
+        <div class="d-inline-block pl-3 pr-3" style="width: 60%;">
+            <div style="font-size: 14px; color: #878787;" class="text-ellipsis">{{product.title}}</div>
+            <div style="font-size: 14px; color: #212121;" class="text-ellipsis">{{product.description}}</div>
+            <div style="font-size: 16px; color: #212121;">{{product?.price | currency}}</div>
+        </div>
+    </span>
+</div>
+
+<div *ngIf="!loading && !errorMsg" class="mt-3 mb-3 d-flex justify-content-center">
+    <button class="btn-primary" (click)="prevPage()" [disabled]="products.length <= 40">Prev</button>
+    <button class="ml-2 btn-primary" (click)="nextPage()">Next</button>
+</div>

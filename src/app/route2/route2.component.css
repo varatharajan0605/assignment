@@ -1,0 +1,17 @@
+.activeViewState {
+    border: 1px solid #ccc;
+}
+
+.card-container:hover {
+    box-shadow: 0 0 3px;
+}
+
+.text-ellipsis {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+:host {
+    background-color: #ddd;
+}

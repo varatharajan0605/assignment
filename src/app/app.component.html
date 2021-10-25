@@ -1,0 +1,10 @@
+<h3>Welcome to Assignment App</h3>
+<nav>
+  <button *ngFor="let nav of navItems;" [routerLink]="nav.path" class="bg-primary text-white ml-2">{{nav.label}}</button>
+  <!-- <button class="bg-primary text-white ml-2">Route 2</button>
+  <button class="bg-primary text-white ml-2">Route 3</button>
+  <button class="bg-primary text-white ml-2">Route 4</button>
+  <button class="bg-primary text-white ml-2">Route 5</button>
+  <button class="bg-primary text-white ml-2">Route 6</button> -->
+</nav>
+<router-outlet></router-outlet>

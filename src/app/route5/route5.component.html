@@ -1,0 +1,22 @@
+<div class="m-3">
+    <table id="student" class="w-100" style="table-layout: fixed;">
+        <thead>
+            <tr class="btn-primary">
+                <th style="text-transform: capitalize; cursor: pointer;" (click)="sortHandler(heading)" class="pl-2" *ngFor="let heading of headings;">
+                    <span *ngIf="sortDetails.mode == 'asc' && sortDetails.column == heading" class="pr-1"><fa-icon [icon]="asc"></fa-icon></span>
+                    <span *ngIf="sortDetails.mode == 'desc' && sortDetails.column == heading" class="pr-1"><fa-icon [icon]="desc"></fa-icon></span>{{heading}}
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let student of students;">
+                <td class="pl-2">{{student['name']}}</td>
+                <td class="pl-2">{{student['class']}}</td>
+                <td class="pl-2">{{student['section']}}</td>
+                <td class="pl-2">{{student['maths']}}</td>
+                <td class="pl-2">{{student['science']}}</td>
+                <td class="pl-2">{{student['socialScience']}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
